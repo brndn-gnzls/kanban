@@ -2,7 +2,7 @@ export default class Kanban {
 
     static getTasks(columnId) {
         const data = read().find((column) => {
-            return column.columnId = columnId
+            return column.columnId == columnId
         })
 
         if(!data) {
@@ -97,9 +97,9 @@ function read() {
 
     if (!data) {
         return [
-            { columndId: 0, tasks: [] },
-            { columndId: 1, tasks: [] },
-            { columndId: 2, tasks: [] },
+            { columnId: 0, tasks: [] },
+            { columnId: 1, tasks: [] },
+            { columnId: 2, tasks: [] }
         ]
     }
 
